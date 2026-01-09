@@ -5,6 +5,7 @@ google-generativeai
 google-api-core
 flask
 flask-cors
+dotenv
 git rm 
 git commit -m "Remove file with API key"
 git push origin main
