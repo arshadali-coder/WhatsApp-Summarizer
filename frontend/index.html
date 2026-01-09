@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhatsApp Chat Summarizer</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font fallback (optional safety) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 🔵 Animated Background -->
+  <div id="particles-js"></div>
+
+  <!-- 🟢 Main Content -->
+  <div class="container">
+
+    <h1>WhatsApp Chat Summarizer</h1>
+    <p class="subtitle">
+      Upload your WhatsApp chat export and get a clean, AI-generated summary
+    </p>
+
+    <!-- 📂 Upload Section -->
+    <div class="upload-box">
+      <input type="file" id="fileInput" accept=".txt,.zip" />
+      <button onclick="analyzeChat()">Analyze Chat</button>
+    </div>
+
+    <!-- 🔔 Status Message -->
+    <p id="status"></p>
+
+    <!-- 📄 Result Card -->
+    <div id="result" class="card hidden">
+      <h3>Summary</h3>
+      <pre id="summary"></pre>
+    </div>
+
+  </div>
+
+  <!-- 🔹 Particles Library -->
+  <script src="particles.min.js"></script>
+
+  <!-- 🔹 Particles Configuration -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 60,
+          density: { enable: true, value_area: 800 }
+        },
+        color: { value: "#ffffff" },
+        shape: { type: "circle" },
+        opacity: {
+          value: 0.5,
+          random: true
+        },
+        size: {
+          value: 3,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.3,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+
+  <!-- 🔹 Main JS Logic -->
+  <script src="script.js"></script>
+
+</body>
+</html>
